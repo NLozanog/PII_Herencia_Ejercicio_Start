@@ -14,7 +14,7 @@ namespace PII_Herencia
 
             Usuario pasajero1 = new Pasajero("Roberto","Suarez");
             Usuario conductor1 = new Conductor("Pepe","Ruiz");
-            Usuario conductorPool1 = new ConductorPool(conductor1.Nombre,conductor1.Apellido, 3);
+            Usuario conductorPool1 = new ConductorPool("Jose Manuel","Piriz", 3);
             UcuRideShare<Usuario> rideShare = UcuRideShare<Usuario>.Instance;
             rideShare.Add(pasajero1);
             
