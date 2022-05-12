@@ -10,31 +10,22 @@ namespace PII_Herencia
             /*
             En éste método deberas mostrar un ejemplo de funcionamiento de tu programa an pseudocódigo. A continuación te 
             planteamos un ejemplo de como hacerlo. Esto no significa que te limites a hacer solamente esto, debes pensar 
-            en grande!
+            en grande!*/
 
-            Usuario pasajero1 = nuevo Pasajero()
-            Usuario pasajero2 = nuevo Pasajero()
-            Usuario pasajero3 = nuevo Pasajero()
-            Usuario conductor1 = nuevo Conductor()
-            Usuario conductorPool1 = nuevo ConductorPool(maxPasajeros = 3)
-            UcuRideShare rideShare = nuevo UcuRideShare()
+            Usuario pasajero1 = new Pasajero("Roberto","Suarez");
+            Usuario conductor1 = new Conductor("Pepe","Ruiz");
+            Usuario conductorPool1 = new ConductorPool(conductor1.Nombre,conductor1.Apellido, 3);
+            UcuRideShare<Usuario> rideShare = UcuRideShare<Usuario>.Instance;
+            rideShare.Add(pasajero1);
             
-            rideShare.Add(conductor1)
-            Se publica en Twitter un nuevo conductor!
+            rideShare.Add(conductor1);
+           // Se publica en Twitter un nuevo conductor!
 
-            rideShare.Add(conductorPool1)
-            Se publica en Twitter un nuevo conductor!
+            rideShare.Add(conductorPool1);
+            //Se publica en Twitter un nuevo conductor!
+            rideShare.Mostrar();
+
             
-            rideShare.Add(pasajero1)
-            Se publica en Twitter nuevo registro de pasajero!
-            
-            rideShare.Add(pasajero2)
-            Se publica en Twitter nuevo registro de pasajero!
-
-            rideShare.Add(pasajero3)
-            Se publica en Twitter nuevo registro de pasajero!
-
-            */
         }
     }
 }
